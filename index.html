@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Donate Bangladesh</title>
+
+   <!-- Lexend Font CDN Link -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+   <!-- DaisyUI CDN Link -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- Tailwind Config Section -->
+   <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+               colors: {
+                  buttonBg: "#B4F461",
+                  navColor: "#F9F7F3",
+                  textColor: "#111111B3",
+                  grayColor: "#E7E7E7",
+               },
+            },
+            fontFamily: {
+               Lexend: "Lexend",
+            },
+         },
+      };
+   </script>
 </head>
-<body>
-   
+
+<body class="font-Lexend relative">
+   <header class="w-full sticky top-0">
+      <nav class="bg-navColor py-5">
+         <!-- Responsive Mobile View logo Start Here -->
+         <div class="lg:hidden flex justify-center items-center mb-8">
+            <img class="w-12 h-12 mr-4" src="assets/logo.png" alt="Logo Image" />
+            <h3 class="text-center text-xl font-semibold text-black">
+               Donate Bangladesh
+            </h3>
+         </div>
+         <!-- Responsive Mobile View logo End Here -->
+         <div class="flex justify-around items-center">
+            <div class="text-center">
+               <button id="blog-page-btn" class="btn bg-buttonBg hover:bg-buttonBg text-xl font-semibold text-black">
+                  Blog
+               </button>
+            </div>
+
+            <div class="hidden lg:block lg:flex lg:justify-center lg:items-center mb-8 lg:mb-0">
+               <img class="w-12 h-12 mr-4" src="assets/logo.png" alt="Logo Image" />
+               <h3 class="text-center text-xl font-semibold text-black">
+                  Donate Bangladesh
+               </h3>
+            </div>
+
+            <div class="flex justify-center items-center">
+               <img class="w-7 h-7 mr-3" src="assets/coin.png" alt="Coin Image" />
+               <p class="text-xl font-medium text-textColor">
+                  <span id="main-balance">5500</span>
+                  <span>BDT</span>
+               </p>
+            </div>
+         </div>
+      </nav>
+
+      <!-- Banner Button Section Code Start Here -->
+      <section class="flex justify-center items-center py-3 lg:pt-8 lg:pb-5 gap-5 bg-white">
+         <button id="donation-btn" class="btn btn-active bg-buttonBg hover:bg-buttonBg text-xl font-medium">
+            Donation
+         </button>
+         <button id="history-btn" class="btn btn-active hover:bg-buttonBg text-xl font-medium">
+            History
+         </button>
+      </section>
+      <!-- Banner Button Section Code End Here -->
+   </header>
+
 </body>
+
 </html>
